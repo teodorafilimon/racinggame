@@ -1,6 +1,10 @@
 package org.fasttrackit;
 
-public class Vehicle {
+import java.time.LocalDate;
+import java.util.Date;
+
+public class Vehicle  {
+    // instance variables
     String name;
     String color;
     double mileage;
@@ -8,4 +12,7 @@ public class Vehicle {
     double fuelLevel;
     double traveledDistance;
     boolean running;
+
+    LocalDate createdDate = LocalDate.now() .minusWeeks(2);
+
 }
