@@ -12,11 +12,16 @@ public class App
     // one line comment
 
     public static void main( String[] args )
-    {
+    { Engine engine = new Engine();
+
         System.out.println( "Welcome to the racing game" );
         //instance variables
+        Engine carEngine = new Engine ();
+        carEngine.manufacturer = "Renault";
+        carEngine.capacity = 1.5;
 
-       Car carReference = new Car();
+
+       Car carReference = new Car(carEngine);
        carReference.name = "Dacia";
        carReference.color = "red";
        carReference.mileage = 9.8;
@@ -25,10 +30,6 @@ public class App
        carReference.running = false;
        carReference.doorCount= 2;
 
-       Engine carEngine = new Engine ();
-       carEngine.manufacturer = "Renault";
-       carEngine.capacity = 1.5;
-       carReference.engine = carEngine;
 
         System.out.println("Engine Details...");
         System.out.println(carReference.engine.manufacturer);
@@ -42,7 +43,12 @@ public class App
 
         System.out.println("Total traveled distance after repair :" + carReference.traveledDistance);
 
-       Car car2 = new Car();
+        Engine car2Engine = new Engine ();
+        carEngine.manufacturer = "Renault";
+        carEngine.capacity = 2;
+
+
+       Car car2 = new Car(car2Engine);
        car2.name = "BMW";
        car2.mileage = 14;
 //concanetaton
@@ -82,7 +88,7 @@ public class App
 //        System.out.println(4 % 3);
 //        System.out.println(4 % 2 == 0);
 
-        
+
 
 
 
