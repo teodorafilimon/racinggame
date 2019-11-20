@@ -4,6 +4,9 @@ import java.time.LocalDate;
 import java.util.Date;
 
 public class Vehicle  {
+    //class variable
+    static int totalCount;
+
     // instance variables
     String name;
     String color;
@@ -12,6 +15,8 @@ public class Vehicle  {
     double fuelLevel;
     double traveledDistance;
     boolean running;
+
+
 
     public double accelerate (double speed, double durationInHours) {
         System.out.println(name + "is accelerating with" + speed + "for" + durationInHours + "h" );
